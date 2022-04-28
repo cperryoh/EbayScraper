@@ -32,9 +32,6 @@ public class ListingData {
             timeBetweenSales.add(dif);
         }
         this.timeBetweenSales=timeBetweenSales;
-        int[]a=this.timeBetweenSales.stream()
-                .mapToInt(Integer::intValue)
-                .toArray();
         IntSummaryStatistics timeBetweenSalesStats= getDataInt(timeBetweenSales);
         DoubleSummaryStatistics priceData= getDataDouble(prices);
         System.out.println("\nTime between sales stats");
